@@ -10,11 +10,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var home_component_1 = require('./home.component');
+var widgets_module_1 = require('../widgets/widgets.module');
 var HomeModule = (function () {
     function HomeModule() {
     }
     HomeModule = __decorate([
         core_1.NgModule({
+            imports: [widgets_module_1.WidgetModule],
             declarations: [home_component_1.HomeComponent],
             exports: [home_component_1.HomeComponent]
         }), 
