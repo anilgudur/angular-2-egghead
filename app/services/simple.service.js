@@ -8,20 +8,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var services_module_1 = require('../services/services.module');
-var HomeComponent = (function () {
-    function HomeComponent(simpleService) {
-        this.simpleService = simpleService;
+var core_1 = require("@angular/core");
+var SimpleService = (function () {
+    function SimpleService() {
+        this.message = 'Hello from the Simple Service!';
     }
-    HomeComponent = __decorate([
-        core_1.Component({
-            selector: 'home',
-            template: "\n  <div>I'm a Home component</div>\n  <widget-one></widget-one>\n  <widget-two></widget-two>\n  "
-        }), 
-        __metadata('design:paramtypes', [services_module_1.SimpleService])
-    ], HomeComponent);
-    return HomeComponent;
+    SimpleService = __decorate([
+        core_1.Injectable(), 
+        __metadata('design:paramtypes', [])
+    ], SimpleService);
+    return SimpleService;
 }());
-exports.HomeComponent = HomeComponent;
-//# sourceMappingURL=home.component.js.map
+exports.SimpleService = SimpleService;
+//# sourceMappingURL=simple.service.js.map
