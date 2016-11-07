@@ -5,8 +5,10 @@ import { SimpleService } from '../services/services.module';
   selector: 'home',
   template: `
   <div>I'm a Home component</div>
-  <widget-one></widget-one>
-  <widget-two></widget-two>
+  {{simpleService.message}}
+
+  <widget-one [message]="simpleService.message"></widget-one>
+  <widget-one [message]="'Hello world'"></widget-one>
   `
 })
 export class HomeComponent {

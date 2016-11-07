@@ -17,7 +17,7 @@ var HomeComponent = (function () {
     HomeComponent = __decorate([
         core_1.Component({
             selector: 'home',
-            template: "\n  <div>I'm a Home component</div>\n  <widget-one></widget-one>\n  <widget-two></widget-two>\n  "
+            template: "\n  <div>I'm a Home component</div>\n  {{simpleService.message}}\n\n  <widget-one [message]=\"simpleService.message\"></widget-one>\n  <widget-one [message]=\"'Hello world'\"></widget-one>\n  "
         }), 
         __metadata('design:paramtypes', [services_module_1.SimpleService])
     ], HomeComponent);

@@ -12,10 +12,14 @@ var core_1 = require('@angular/core');
 var WidgetOne = (function () {
     function WidgetOne() {
     }
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], WidgetOne.prototype, "message", void 0);
     WidgetOne = __decorate([
         core_1.Component({
             selector: 'widget-one',
-            template: "\n  <div>One</div>\n  "
+            template: "\n  <h2>One's message:</h2>\n  <h3>{{message}}</h3>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], WidgetOne);
