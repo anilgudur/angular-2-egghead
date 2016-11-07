@@ -19,6 +19,7 @@ var WidgetOne = (function () {
     WidgetOne = __decorate([
         core_1.Component({
             selector: 'widget-one',
+            styles: ["\n  :host{\n  \t\tdisplay:block;\n  \t\tborder: 3px dashed black;\n  \t\tfont-family: \"Times New Roman\";\n  }\n  "],
             template: "\n  <h2>One's message:</h2>\n  <h3>{{message}}</h3>\n  "
         }), 
         __metadata('design:paramtypes', [])
