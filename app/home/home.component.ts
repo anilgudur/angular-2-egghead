@@ -5,7 +5,8 @@ import { WidgetThree }   from '../widgets/widget-three.component';
 @Component({
   selector: 'home',
   template: `
-  <div #widgetContainer></div>
+	<button (click)="onClick()">Add Component</button>
+  	<div #widgetContainer></div>
   `
 })
 export class HomeComponent {
@@ -22,7 +23,14 @@ export class HomeComponent {
 		this.widgetThreeContainer.createComponent(widgetFactory);
 		this.widgetThreeContainer.createComponent(widgetFactory);
 		this.widgetThreeContainer.createComponent(widgetFactory);
-		const widgetRef = this.widgetThreeContainer.createComponent(widgetFactory);
-		widgetRef.instance.message = "I'm last!";
+		const widgetRef = this.widgetThreeContainer.createComponent(widgetFactory, 2);
+		widgetRef.instance.message = "I'm third";
+	}
+
+	onClick(){
+		const widgetFactory = this.resolver.resolveComponentFactory(WidgetThree);
+
+		const widgetRef = this.widgetThreeContainer.createComponent(widgetFactory, 3);
+		widgetRef.instance.message = "I'm fourth";
 	}
 }
