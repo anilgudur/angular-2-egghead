@@ -8,13 +8,23 @@ import { WidgetThree }   from '../widgets/widget-three.component';
 	<button (click)="onClick()">Add Component</button>
 	<button (click)="onClickMove()">Move Component</button>
 	<button (click)="onClickDetach()">Detach Component</button>
+	
+	<button (click)="onClickCreateTemplate()">Create Template</button>
+	
   	<div #widgetContainer></div>
+  	
+  	<template #templateContainer let-letDescription="description">
+	  	<h2>My {{letDescription}} template</h2>
+	  	<button>My {{letDescription}} button</button>
+	</template>
   `
 })
 export class HomeComponent {
 	//constructor(private simpleService:SimpleService){}
 
 	@ViewChild('widgetContainer', {read:ViewContainerRef}) widgetThreeContainer;
+
+	@ViewChild('templateContainer') varTemplateContainer;
 
 	widgetRef;
 
@@ -46,5 +56,11 @@ export class HomeComponent {
 
 	onClickDetach(){
 		this.widgetThreeContainer.detach(2);
+	}
+
+	onClickCreateTemplate(){
+		this.widgetThreeContainer.createEmbeddedView(this.varTemplateContainer, {
+			description: "sweet"
+		});
 	}
 }

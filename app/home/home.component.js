@@ -35,14 +35,23 @@ var HomeComponent = (function () {
     HomeComponent.prototype.onClickDetach = function () {
         this.widgetThreeContainer.detach(2);
     };
+    HomeComponent.prototype.onClickCreateTemplate = function () {
+        this.widgetThreeContainer.createEmbeddedView(this.varTemplateContainer, {
+            description: "sweet"
+        });
+    };
     __decorate([
         core_1.ViewChild('widgetContainer', { read: core_1.ViewContainerRef }), 
         __metadata('design:type', Object)
     ], HomeComponent.prototype, "widgetThreeContainer", void 0);
+    __decorate([
+        core_1.ViewChild('templateContainer'), 
+        __metadata('design:type', Object)
+    ], HomeComponent.prototype, "varTemplateContainer", void 0);
     HomeComponent = __decorate([
         core_1.Component({
             selector: 'home',
-            template: "\n\t<button (click)=\"onClick()\">Add Component</button>\n\t<button (click)=\"onClickMove()\">Move Component</button>\n\t<button (click)=\"onClickDetach()\">Detach Component</button>\n  \t<div #widgetContainer></div>\n  "
+            template: "\n\t<button (click)=\"onClick()\">Add Component</button>\n\t<button (click)=\"onClickMove()\">Move Component</button>\n\t<button (click)=\"onClickDetach()\">Detach Component</button>\n\t\n\t<button (click)=\"onClickCreateTemplate()\">Create Template</button>\n\t\n  \t<div #widgetContainer></div>\n  \t\n  \t<template #templateContainer let-letDescription=\"description\">\n\t  \t<h2>My {{letDescription}} template</h2>\n\t  \t<button>My {{letDescription}} button</button>\n\t</template>\n  "
         }), 
         __metadata('design:paramtypes', [core_1.ComponentFactoryResolver])
     ], HomeComponent);
