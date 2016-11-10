@@ -10,9 +10,9 @@ import { Component } from '@angular/core';
   template: `
   <h2>Above</h2>
   
-  <ng-content select=".header"></ng-content>
-  <ng-content select=".content"></ng-content>
-  <ng-content select=".footer"></ng-content>
+  <ng-content select="[header]"></ng-content>
+  <ng-content select="[content]"></ng-content>
+  <ng-content select="[footer]"></ng-content>
 
   <h2>Below</h2>
   `
