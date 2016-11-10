@@ -16,7 +16,7 @@ var WidgetTwo = (function () {
         core_1.Component({
             selector: 'widget-two',
             styles: ["\n  :host{\n  \t\tdisplay:block;\n  \t\tborder: 3px solid red;\n  }\n  "],
-            template: "\n  <h2>Above</h2>\n  \n  <ng-content select=\"[header]\"></ng-content>\n  <ng-content select=\"[content]\"></ng-content>\n  <ng-content select=\"[footer]\"></ng-content>\n\n  <h2>Below</h2>\n  "
+            template: "\n  <h2>Above</h2>\n  \n  <ng-content select=\".header\"></ng-content>\n  <ng-content select=\".content\"></ng-content>\n  <ng-content select=\".footer\"></ng-content>\n\n  <h2>Below</h2>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], WidgetTwo);
