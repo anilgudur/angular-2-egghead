@@ -15,7 +15,8 @@ var WidgetTwo = (function () {
     WidgetTwo = __decorate([
         core_1.Component({
             selector: 'widget-two',
-            template: "\n  <div>Two</div>\n  "
+            styles: ["\n  :host{\n  \t\tdisplay:block;\n  \t\tborder: 3px solid red;\n  }\n  "],
+            template: "\n  <h2>Above</h2>\n  <ng-content></ng-content>\n  <h2>Below</h2>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], WidgetTwo);
