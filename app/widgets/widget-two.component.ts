@@ -9,7 +9,11 @@ import { Component } from '@angular/core';
   `],
   template: `
   <h2>Above</h2>
-  <ng-content></ng-content>
+  
+  <ng-content select="div"></ng-content>
+  <ng-content select="h3"></ng-content>
+  <ng-content select="h2"></ng-content>
+
   <h2>Below</h2>
   `
 })

@@ -5,10 +5,9 @@ import { SimpleService } from '../services/services.module';
   selector: 'home',
   template: `
   <widget-two>
-  	<widget-one [message]="simpleService.message"></widget-one>
-  </widget-two>
-  <widget-two>
-  	Some other content
+  	<h2>Title</h2>
+  	<div>Some content</div>
+  	<h3>Footer</h3>
   </widget-two>
   `
 })
