@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var widget_one_component_1 = require('./widget-one.component');
 var widget_two_component_1 = require('./widget-two.component');
+var widget_three_component_1 = require('./widget-three.component');
 var common_1 = require('@angular/common');
 var WidgetModule = (function () {
     function WidgetModule() {
@@ -18,8 +19,8 @@ var WidgetModule = (function () {
     WidgetModule = __decorate([
         core_1.NgModule({
             imports: [common_1.CommonModule],
-            declarations: [widget_one_component_1.WidgetOne, widget_two_component_1.WidgetTwo],
-            exports: [widget_one_component_1.WidgetOne, widget_two_component_1.WidgetTwo, common_1.CommonModule]
+            declarations: [widget_one_component_1.WidgetOne, widget_two_component_1.WidgetTwo, widget_three_component_1.WidgetThree],
+            exports: [widget_one_component_1.WidgetOne, widget_two_component_1.WidgetTwo, widget_three_component_1.WidgetThree, common_1.CommonModule]
         }), 
         __metadata('design:paramtypes', [])
     ], WidgetModule);
