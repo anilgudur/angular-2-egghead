@@ -12,6 +12,7 @@ var core_1 = require("@angular/core");
 var WidgetThree = (function () {
     function WidgetThree(renderer) {
         this.renderer = renderer;
+        this.message = "default value!";
     }
     WidgetThree.prototype.ngAfterViewInit = function () {
         this.renderer.invokeElementMethod(this.input.nativeElement, 'focus', []);
@@ -20,10 +21,14 @@ var WidgetThree = (function () {
         core_1.ViewChild('whatever'), 
         __metadata('design:type', Object)
     ], WidgetThree.prototype, "input", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], WidgetThree.prototype, "message", void 0);
     WidgetThree = __decorate([
         core_1.Component({
             selector: 'widget-three',
-            template: "\n\t\t<input #whatever type=\"text\">\n\t"
+            template: "\n\t\t<input #whatever type=\"text\" [value]=\"message\">\n\t"
         }), 
         __metadata('design:paramtypes', [core_1.Renderer])
     ], WidgetThree);

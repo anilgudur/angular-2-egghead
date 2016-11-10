@@ -22,6 +22,7 @@ export class HomeComponent {
 		this.widgetThreeContainer.createComponent(widgetFactory);
 		this.widgetThreeContainer.createComponent(widgetFactory);
 		this.widgetThreeContainer.createComponent(widgetFactory);
-		this.widgetThreeContainer.createComponent(widgetFactory);
+		const widgetRef = this.widgetThreeContainer.createComponent(widgetFactory);
+		widgetRef.instance.message = "I'm last!";
 	}
 }

@@ -20,7 +20,8 @@ var HomeComponent = (function () {
         this.widgetThreeContainer.createComponent(widgetFactory);
         this.widgetThreeContainer.createComponent(widgetFactory);
         this.widgetThreeContainer.createComponent(widgetFactory);
-        this.widgetThreeContainer.createComponent(widgetFactory);
+        var widgetRef = this.widgetThreeContainer.createComponent(widgetFactory);
+        widgetRef.instance.message = "I'm last!";
     };
     __decorate([
         core_1.ViewChild('widgetContainer', { read: core_1.ViewContainerRef }), 
