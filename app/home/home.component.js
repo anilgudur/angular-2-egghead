@@ -20,13 +20,20 @@ var HomeComponent = (function () {
         this.widgetThreeContainer.createComponent(widgetFactory);
         this.widgetThreeContainer.createComponent(widgetFactory);
         this.widgetThreeContainer.createComponent(widgetFactory);
-        var widgetRef = this.widgetThreeContainer.createComponent(widgetFactory, 2);
-        widgetRef.instance.message = "I'm third";
+        this.widgetRef = this.widgetThreeContainer.createComponent(widgetFactory, 2);
+        this.widgetRef.instance.message = "I'm third";
     };
     HomeComponent.prototype.onClick = function () {
         var widgetFactory = this.resolver.resolveComponentFactory(widget_three_component_1.WidgetThree);
-        var widgetRef = this.widgetThreeContainer.createComponent(widgetFactory, 3);
-        widgetRef.instance.message = "I'm fourth";
+        var widgetRef2 = this.widgetThreeContainer.createComponent(widgetFactory, 3);
+        widgetRef2.instance.message = "I'm fourth";
+    };
+    HomeComponent.prototype.onClickMove = function () {
+        var randomIndex = Math.floor(Math.random() * this.widgetThreeContainer.length);
+        this.widgetThreeContainer.move(this.widgetRef.hostView, randomIndex);
+    };
+    HomeComponent.prototype.onClickDetach = function () {
+        this.widgetThreeContainer.detach(2);
     };
     __decorate([
         core_1.ViewChild('widgetContainer', { read: core_1.ViewContainerRef }), 
@@ -35,7 +42,7 @@ var HomeComponent = (function () {
     HomeComponent = __decorate([
         core_1.Component({
             selector: 'home',
-            template: "\n\t<button (click)=\"onClick()\">Add Component</button>\n  \t<div #widgetContainer></div>\n  "
+            template: "\n\t<button (click)=\"onClick()\">Add Component</button>\n\t<button (click)=\"onClickMove()\">Move Component</button>\n\t<button (click)=\"onClickDetach()\">Detach Component</button>\n  \t<div #widgetContainer></div>\n  "
         }), 
         __metadata('design:paramtypes', [core_1.ComponentFactoryResolver])
     ], HomeComponent);
