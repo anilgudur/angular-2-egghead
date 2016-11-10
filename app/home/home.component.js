@@ -9,17 +9,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var services_module_1 = require('../services/services.module');
+var widget_three_component_1 = require('../widgets/widget-three.component');
 var HomeComponent = (function () {
-    function HomeComponent(simpleService) {
-        this.simpleService = simpleService;
+    function HomeComponent(resolver) {
+        this.resolver = resolver;
     }
+    HomeComponent.prototype.ngAfterContentInit = function () {
+        var widgetFactory = this.resolver.resolveComponentFactory(widget_three_component_1.WidgetThree);
+        this.widgetThreeContainer.createComponent(widgetFactory);
+        this.widgetThreeContainer.createComponent(widgetFactory);
+        this.widgetThreeContainer.createComponent(widgetFactory);
+        this.widgetThreeContainer.createComponent(widgetFactory);
+        this.widgetThreeContainer.createComponent(widgetFactory);
+    };
+    __decorate([
+        core_1.ViewChild('widgetContainer', { read: core_1.ViewContainerRef }), 
+        __metadata('design:type', Object)
+    ], HomeComponent.prototype, "widgetThreeContainer", void 0);
     HomeComponent = __decorate([
         core_1.Component({
             selector: 'home',
-            template: "\n  <widget-three></widget-three>\n  "
+            template: "\n  <div #widgetContainer></div>\n  "
         }), 
-        __metadata('design:paramtypes', [services_module_1.SimpleService])
+        __metadata('design:paramtypes', [core_1.ComponentFactoryResolver])
     ], HomeComponent);
     return HomeComponent;
 }());

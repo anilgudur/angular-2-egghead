@@ -20,6 +20,7 @@ var WidgetModule = (function () {
         core_1.NgModule({
             imports: [common_1.CommonModule],
             declarations: [widget_one_component_1.WidgetOne, widget_two_component_1.WidgetTwo, widget_three_component_1.WidgetThree],
+            entryComponents: [widget_three_component_1.WidgetThree],
             exports: [widget_one_component_1.WidgetOne, widget_two_component_1.WidgetTwo, widget_three_component_1.WidgetThree, common_1.CommonModule]
         }), 
         __metadata('design:paramtypes', [])
