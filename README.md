@@ -4,8 +4,11 @@ AngularJS 2 - Egghead
 Below are the tags/releases  that you can easily fetch the tags
 
 01-basic-step-02 - 02-egghead-angular-2-structure-a-basic-angular-2-application
+
 01-basic-step-03 - 03-egghead-angular-2-create-application-specific-angular-2-components
+
 01-basic-step-04 - 04-egghead-angular-2-create-shareable-angular-2-components
+
 01-basic-step-05 - 05-egghead-angular-2-share-a-service-across-angular-2-components-and-modules
 
 
